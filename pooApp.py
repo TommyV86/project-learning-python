@@ -14,7 +14,7 @@ class Game:
         self.screen_size = [360, 600]
         self.screen = pygame.display.set_mode(self.screen_size)
         self.screen = pygame.display.set_caption("Dodge Game")
-        self.screen = pygame.image.load("bg.png")
+        self.bg = pygame.image.load("bg.png")
 
     def alien(self):
         self.alien_1 = pygame.image.load("alien.png")
@@ -29,12 +29,7 @@ game = Game()
 
 
 running = True
-while running:
-    
-    game.setup_display()
-    game.alien()
-    game.enemy()
-    
+while running:  
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
