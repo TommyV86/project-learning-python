@@ -13,7 +13,7 @@ class Game:
     def setup_display(self):
         self.screen_size = [360, 600]
         self.screen = pygame.display.set_mode(self.screen_size)
-        self.screen = pygame.display.set_caption("Dodge Game")
+        self.title = pygame.display.set_caption("Dodge Game")
         self.bg = pygame.image.load("bg.png")
 
     def alien(self):
