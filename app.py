@@ -30,10 +30,10 @@ enemy_y = [random_y(), random_y(), random_y()]
 def crash(idx):
     global score
     global running
-    score -= 100
+    score -= 400
     enemy_y[idx] = random_y()
     print("crash with alien", idx, score)
-    if score == -300:
+    if score < -1200:
         print("perdu ..")
         running = False
 
