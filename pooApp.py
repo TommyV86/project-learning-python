@@ -3,7 +3,6 @@ import random
 
 pygame.init()
 
-
 class Game:
     def __init__(self):
         self.setup_display()
@@ -19,6 +18,7 @@ class Game:
     def alien(self):
         self.alien_1 = pygame.image.load("alien.png")
         self.alien_1 = pygame.transform.scale(self.alien_1, (105, 105))
+        self.alien_x = 130
     
     def enemy(self):
         self.enemy_1 = pygame.image.load("enemy.png")
@@ -29,11 +29,16 @@ game = Game()
 
 
 running = True
-while running:  
+while running:
+
+    game.screen.blit(game.bg, [0, 0])
+    game.screen.blit(game.alien_1, [game.alien_x, 500])
+    game.screen.blit(game.enemy_1, [130, 0])
+    pygame.display.flip()
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
             pygame.quit()
-            print("game over")
-            
+            print("game over")  
+       
