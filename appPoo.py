@@ -20,10 +20,7 @@ class Enemy:
     def __init__(self):
         self.enemy_0 = pygame.image.load("enemy.png")
         self.enemy_0 = pygame.transform.scale(self.enemy_0, (120, 120))
-        self.enemy_1 = self.enemy_0.get_rect()
-        self.enemy_1.y = -1 * random.randint(100, 200)
-        self.enemy_1.y += 1
-
+        
 display = Display()
 alien = Alien()
 enemy = Enemy()
